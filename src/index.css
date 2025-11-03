@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: "night";
+}
+
+;
+
+/* الكود ده هيمنع أي سكرول أفقي في الصفحة بالكامل */
+body {
+    overflow-x: hidden;
+    /* (ممكن تحتاج تضيف السطر ده لو لسه فيه مشاكل في بعض المتصفحات) */
+    width: 100%;
+}
+
+.active {
+    color: #487df1;
+    /* Tailwind's blue-600 */
+    font-weight: bolder;
+    font-size: 1.11rem;
+    /* Tailwind's text-lg */
+    transition: 0.2s;
+}
+
+.typing-text .cursor {
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

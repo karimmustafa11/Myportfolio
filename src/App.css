@@ -1,0 +1,64 @@
+/* pulsing text effect */
+/* هذا الكود يمكن إضافته في ملف الـ CSS */
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pulsing-text {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+
+/* الحركة اللي بتدخل من اليسار */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    /* تبدأ خارج الشاشة من اليسار */
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    /* تنتهي في مكانها الأصلي */
+    opacity: 1;
+  }
+}
+
+/* الحركة اللي بتدخل من اليمين */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    /* تبدأ خارج الشاشة من اليمين */
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    /* تنتهي في مكانها الأصلي */
+    opacity: 1;
+  }
+}
+
+/* الكلاسات اللي هنستخدمها في React/Tailwind */
+.animate-left-slide {
+  animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+.animate-right-slide {
+  animation: slideInFromRight 1.2s ease-out forwards;
+}
