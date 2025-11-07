@@ -1,5 +1,4 @@
-/* pulsing text effect */
-/* هذا الكود يمكن إضافته في ملف الـ CSS */
+
 
 @keyframes pulse {
   0% {
@@ -24,41 +23,83 @@
 
 
 
-/* الحركة اللي بتدخل من اليسار */
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
-    /* تبدأ خارج الشاشة من اليسار */
     opacity: 0;
   }
 
   100% {
     transform: translateX(0);
-    /* تنتهي في مكانها الأصلي */
     opacity: 1;
   }
 }
 
-/* الحركة اللي بتدخل من اليمين */
 @keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
-    /* تبدأ خارج الشاشة من اليمين */
     opacity: 0;
   }
 
   100% {
     transform: translateX(0);
-    /* تنتهي في مكانها الأصلي */
     opacity: 1;
   }
 }
 
-/* الكلاسات اللي هنستخدمها في React/Tailwind */
 .animate-left-slide {
   animation: slideInFromLeft 1.2s ease-out forwards;
 }
 
 .animate-right-slide {
   animation: slideInFromRight 1.2s ease-out forwards;
+}
+
+/* Stars background for AboutMe component */
+.star {
+  position: absolute;
+  display: block;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 6px rgba(255,255,255,0.8);
+  opacity: 0.9;
+  /* two animations: wander handles position offset, twinkle handles opacity/blur */
+  animation: wander var(--wanderDur, 8s) ease-in-out infinite alternate,
+             twinkle var(--twinkleDur, 1.8s) ease-in-out infinite alternate;
+  animation-delay: var(--wanderDelay, 0s), var(--twinkleDelay, 0s);
+  will-change: transform, opacity, box-shadow;
+}
+
+@keyframes wander {
+  0% {
+    transform: translate(-50%, -50%) translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-50%, -50%) translate(var(--dx1, 8px), var(--dy1, 6px));
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(var(--dx2, -6px), var(--dy2, 10px));
+  }
+  75% {
+    transform: translate(-50%, -50%) translate(var(--dx3, 4px), var(--dy3, -8px));
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0px, 0px);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.25;
+    box-shadow: 0 0 2px rgba(255,255,255,0.4);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(255,255,255,0.9);
+  }
+  100% {
+    opacity: 0.3;
+    box-shadow: 0 0 2px rgba(255,255,255,0.4);
+  }
 }

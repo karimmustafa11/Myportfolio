@@ -6,19 +6,17 @@
 
 ;
 
-/* الكود ده هيمنع أي سكرول أفقي في الصفحة بالكامل */
 body {
     overflow-x: hidden;
-    /* (ممكن تحتاج تضيف السطر ده لو لسه فيه مشاكل في بعض المتصفحات) */
+    overflow-y: auto;
+background-color: transparent !important;
     width: 100%;
 }
 
 .active {
     color: #487df1;
-    /* Tailwind's blue-600 */
     font-weight: bolder;
     font-size: 1.11rem;
-    /* Tailwind's text-lg */
     transition: 0.2s;
 }
 
@@ -37,4 +35,95 @@ body {
     50% {
         opacity: 1;
     }
+}
+
+
+@keyframes waving {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+.waving-hand {
+    animation: waving 2.5s infinite ease-in-out;
+    display: inline-block;
+    transform-origin: 70% 70%;
+}
+
+
+
+@keyframes move-starfield {
+    to {
+        transform: translateY(-200vh);
+    }
+}
+
+.stars-small {
+    background: transparent;
+    box-shadow:
+        1px 100px #fff,
+        100px 1000px #fff,
+        -50px 500px #fff;
+}
+
+.stars-medium {
+    background: transparent;
+    box-shadow:
+        20px 200px #ccc,
+        500px 800px #ccc,
+        -100px 300px #ccc;
+}
+
+.stars-large {
+    background: transparent;
+    box-shadow:
+        50px 300px #f9f;
+}
+
+
+.moving-starfield {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: move-starfield 150s linear infinite;
+    height: 200vh;
+    width: 200vw;
+}
+
+.stars-medium {
+    animation-duration: 100s;
+}
+
+.stars-large {
+    animation-duration: 70s;
 }
