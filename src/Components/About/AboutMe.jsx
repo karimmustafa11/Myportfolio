@@ -20,10 +20,11 @@ const itemVariants = {
 
 const AboutMe = () => {
     return (
-        <div
-            className="bg-white dark:bg-[#181818] relative py-10 transition-colors duration-500 sm:mt-5 "
-            id="about"
-        >
+       <div
+    className="bg-white dark:bg-[#181818] relative py-10 transition-colors duration-500 sm:mt-5 min-h-screen w-full"
+    id="about"
+>
+
 
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
@@ -33,7 +34,7 @@ const AboutMe = () => {
                 className="text-center pb-10 relative z-10"
             >
                 <h2 className="font-extrabold text-5xl dark:text-[#8cffff] text-blue-600 mb-2 mt-5">About Me</h2>
-                <span className="inline-block w-16 h-1 bg-red-500 rounded-full mx-auto"></span>
+                <span className="inline-block w-20 h-1 bg-gradient-to-r from-blue-600 to-red-500 rounded-full mx-auto shadow-lg"></span>
             </motion.div>
 
             <div className="grid md:grid-cols-12 gap-8 p-4 max-w-6xl mx-auto dark:text-gray-100 text-gray-800 relative z-10">
