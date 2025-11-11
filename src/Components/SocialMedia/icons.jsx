@@ -49,7 +49,7 @@ function SocialMediaIcons() {
                 target="_blank"
                 className="
           bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white 
-          w-12 h-12 rounded-full flex items-center justify-center 
+          w-12 h-12 rounded-[50%] flex items-center justify-center 
           text-2xl font-bold 
           shadow-lg shadow-pink-500/70 /* الـ Glow الأولي */
           transition-all duration-300 ease-in-out
