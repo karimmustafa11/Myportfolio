@@ -6,6 +6,7 @@ import AboutMe from "./Components/About/AboutMe.jsx";
 import Home from "./Components/Home/Home.jsx";
 import Education from "./Components/Education/Education.jsx";
 import Skills from "./Components/Skills/Skills.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       </div>
       <Education />
       <Skills />
+      <Footer />
     </BrowserRouter>
   );
 }
