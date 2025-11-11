@@ -24,7 +24,7 @@ export default function Education() {
         setContent({
             date: "Sep 2019 - Jun 2023",
             description:
-                "During my time at the faculty of computer science, I gained a solid foundation in computer science and acquired essential knowledge and skills in various programming languages, algorithms, data structures, and software development methodologies. The rigorous coursework and hands-on projects equipped me with the ability to tackle complex problems and develop innovative solutions. I actively participated in team projects, collaborating with fellow students to design and implement software applications. These experiences fostered my teamwork and communication skills while honing my ability to work effectively in a collaborative environment.",
+                "Gained a solid foundation in computer science, mastering programming languages, algorithms, data structures, and software development methodologies.Completed hands- on projects and collaborative team work, developing practical problem - solving skills, effective communication, and the ability to deliver software solutions in a team environment.",
             active1: false,
             active2: true,
         });

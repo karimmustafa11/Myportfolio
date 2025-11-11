@@ -46,7 +46,7 @@ const AboutMe = () => {
                     viewport={{ once: true }}
                     className="md:col-span-7 pr-6 leading-5 text-center md:text-left ml-10 md:ml-0"
                 >
-                    <p className="font-bold text-3xl mb-4  dark:text-white text-gray-900 ml-[47px] md:ml-0 ">Hello<span className='text-[#fb2c36]'>,</span> I<span className='text-[#fb2c36]'>'</span>m Karim <span className="waving-hand">👋</span></p>
+                    <p className="font-bold text-3xl mb-4  dark:text-white text-gray-900  md:ml-0 ">Hello<span className='text-[#fb2c36]'>,</span> I<span className='text-[#fb2c36]'>'</span>m Karim <span className="waving-hand">👋</span></p>
 
                     <p className='text-[#daf7f7] text-[16px] sm:text-[18px] md:text-[19px] mt-3 leading-relaxed  pl-4 bg-[#212121] rounded-lg p-4'>
                         I’m a junior full-stack developer passionate about creating interactive and user-friendly web apps. I recently completed the 9-month Open Source track at ITI, gaining hands-on experience in front-end and back-end development with HTML, CSS, JavaScript, React.js, Node.js, and databases. Always eager to learn, I enjoy turning designs into robust, scalable applications.
