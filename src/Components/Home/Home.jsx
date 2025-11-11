@@ -67,7 +67,7 @@ export default function Home() {
                 ))}
             </div>
 
-            <div className='mt-30 text-center w-[50%] animate-left-slide relative z-10'>
+            <div className=' md:mt-30 text-center w-[50%] animate-left-slide relative z-10'>
                 <h1>
                     <AnimatedTitle />
                 </h1>
