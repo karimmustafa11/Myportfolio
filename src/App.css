@@ -103,3 +103,18 @@
     box-shadow: 0 0 2px rgba(255,255,255,0.4);
   }
 }
+
+/* Styles for skill icons in Skills.jsx */
+.skill-icon-img {
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.45));
+  transition: transform 200ms ease, filter 200ms ease;
+}
+.group:hover .skill-icon-img {
+  transform: scale(1.06);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.55));
+}
+
+.skill-icon-fallback {
+  font-size: 0.92rem;
+  color: #e6eef7;
+}

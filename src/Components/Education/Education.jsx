@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Education() {
     const [content, setContent] = React.useState({
-        date: "Sep 2022 - Jun 2023",
+        date: "Oct 2024 - Jul 2025",
         description:
             "Completed a comprehensive 9-month Open Source track at ITI, gaining hands-on experience in full-stack development, including front-end and back-end technologies, project management, and collaborative coding practices.",
         active1: true,
@@ -12,7 +12,7 @@ export default function Education() {
 
     const handleData1 = () => {
         setContent({
-            date: "Sep 2022 - Jun 2023",
+            date: "Oct 2024 - Junl 2025",
             description:
                 "Completed a comprehensive 9-month Open Source track at ITI, gaining hands-on experience in full-stack development, including front-end and back-end technologies, project management, and collaborative coding practices.",
             active1: true,
@@ -22,7 +22,7 @@ export default function Education() {
 
     const handleData2 = () => {
         setContent({
-            date: "Sep 2018 - Jun 2022",
+            date: "Sep 2019 - Jun 2023",
             description:
                 "During my time at the faculty of computer science, I gained a solid foundation in computer science and acquired essential knowledge and skills in various programming languages, algorithms, data structures, and software development methodologies. The rigorous coursework and hands-on projects equipped me with the ability to tackle complex problems and develop innovative solutions. I actively participated in team projects, collaborating with fellow students to design and implement software applications. These experiences fostered my teamwork and communication skills while honing my ability to work effectively in a collaborative environment.",
             active1: false,
@@ -30,7 +30,8 @@ export default function Education() {
         });
     };
     return (
-        <div className="relative z-10 pb-16 pt-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 transition-colors duration-500">
+        <div className="relative z-10 pb-16 pt-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 transition-colors duration-500"
+            id="education">
             {/* ===== عنوان Education ===== */}
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
@@ -84,7 +85,7 @@ export default function Education() {
                             }`}
                     >
                         Information Technology Institute
-                           <span className="text-sm sm:text-base block mt-3 font-medium text-gray-600 dark:text-gray-400">
+                        <span className="text-sm sm:text-base block mt-3 font-medium text-gray-600 dark:text-gray-400">
                             ITI
                         </span>
                     </motion.span>

@@ -19,11 +19,12 @@ export default function Nav() {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
-                        <li><a >About</a></li>
-                        <li><a>Projects</a></li>
-                        <li><a>Education</a></li>
-                        <li><a>Contact</a></li>
+                        <li><HashLink to="/" className={currentPath === '/' ? 'active' : ''} >Home</HashLink></li>
+                        <li><HashLink to="/about#about" className={currentPath === '/about' ? 'active' : ''} smooth>About</HashLink></li>
+                        <li><HashLink to="/education#education" className={currentPath === '/education' ? 'active' : ''}>Education</HashLink></li>
+                        <li><HashLink to="/projects#projects" className={currentPath === '/projects' ? 'active' : ''}>Projects</HashLink></li>
+
+                        <li><HashLink to="/contact#contact" className={currentPath === '/contact' ? 'active' : ''}>Contact</HashLink></li>
 
                     </ul>
                 </div>
@@ -35,8 +36,10 @@ export default function Nav() {
                 <ul className="menu menu-horizontal px-1">
                     <li><HashLink to="/" className={currentPath === '/' ? 'active' : ''} >Home</HashLink></li>
                     <li><HashLink to="/about#about" className={currentPath === '/about' ? 'active' : ''} smooth>About</HashLink></li>
-                    <li><HashLink to="/projects#projects" className={currentPath === '/projects' ? 'active' : ''}>Projects</HashLink></li>
                     <li><HashLink to="/education#education" className={currentPath === '/education' ? 'active' : ''}>Education</HashLink></li>
+                     <li><HashLink to="/skills#skills" className={currentPath === '/skills' ? 'active' : ''}>Skills</HashLink></li>
+                    <li><HashLink to="/projects#projects" className={currentPath === '/projects' ? 'active' : ''}>Projects</HashLink></li>
+
                     <li><HashLink to="/contact#contact" className={currentPath === '/contact' ? 'active' : ''}>Contact</HashLink></li>
                 </ul>
             </div>
