@@ -36,7 +36,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className='relative flex items-start justify-evenly pb-12 md:pb-0 '
+        <div className="relative flex items-start justify-evenly pb-12 md:pb-0 py-24 px-6 bg-linear-to-br from-[#071427] via-[#0b1830] to-[#04060a] text-white"
             style={{ marginBottom: '-21px' }}>
 
             {/* Stars background layer behind Home content */}

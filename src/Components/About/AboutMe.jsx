@@ -21,7 +21,7 @@ const itemVariants = {
 const AboutMe = () => {
     return (
         <div
-            className="bg-white dark:bg-[#181818] relative py-10 transition-colors duration-500 sm:mt-5 min-h-screen w-fu"
+            className="relative z-10 pb-16 pt-8 bg-linear-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 transition-colors duration-500"
             id="about"
         >
 
@@ -34,7 +34,7 @@ const AboutMe = () => {
                 className="text-center pb-10 relative z-10"
             >
                 <h2 className="font-extrabold text-5xl dark:text-[#8cffff] text-blue-600 mb-2 mt-5">About Me</h2>
-                <span className="inline-block w-20 h-1 bg-gradient-to-r from-blue-600 to-red-500 rounded-full mx-auto shadow-lg"></span>
+                <span className="inline-block w-20 h-1 bg-linear-to-r from-blue-600 to-red-500 rounded-full mx-auto shadow-lg"></span>
             </motion.div>
 
             <div className="grid md:grid-cols-12 gap-8 p-4 max-w-6xl mx-auto dark:text-gray-100 text-gray-800 relative z-10">
@@ -48,7 +48,7 @@ const AboutMe = () => {
                 >
                     <p className="font-bold text-3xl mb-4  dark:text-white text-gray-900  md:ml-0 ">Hello<span className='text-[#fb2c36]'>,</span> I<span className='text-[#fb2c36]'>'</span>m Karim <span className="waving-hand">👋</span></p>
 
-                    <p className='text-[#daf7f7] text-[16px] sm:text-[18px] md:text-[19px] mt-3 leading-relaxed  pl-4 bg-[#212121] rounded-lg p-4'>
+                    <p className='text-[#daf7f7] text-[16px] sm:text-[18px] md:text-[19px] mt-3 leading-relaxed  pl-4 bg-[#0000001a] rounded-lg p-4'>
                         I’m a junior full-stack developer passionate about creating interactive and user-friendly web apps. I recently completed the 9-month Open Source track at ITI, gaining hands-on experience in front-end and back-end development with HTML, CSS, JavaScript, React.js, Node.js, and databases. Always eager to learn, I enjoy turning designs into robust, scalable applications.
 
                     </p>

@@ -138,7 +138,7 @@ export default function Skills() {
     const activeSkills = skillCategories[activeCategory] || [];
 
     return (
-        <motion.section className='py-20 px-4 bg-gray-900 text-white' id="skills"
+        <motion.section className='py-20 px-4 bg-linear-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 text-gray-900' id="skills"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

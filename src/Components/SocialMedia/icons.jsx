@@ -47,7 +47,6 @@ function SocialMediaIcons() {
                 <FontAwesomeIcon icon={faGithub} />
             </a>
 
-            {/* 3. Instagram - هنا تم تغيير rounded-[50%] إلى rounded-full */}
             <a
                 href="https://www.instagram.com/karim_mustafa8/#"
                 target="_blank"

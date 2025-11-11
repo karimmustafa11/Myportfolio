@@ -64,7 +64,7 @@
   transform: translate(-50%, -50%);
   box-shadow: 0 0 6px rgba(255,255,255,0.8);
   opacity: 0.9;
-  /* two animations: wander handles position offset, twinkle handles opacity/blur */
+  
   animation: wander var(--wanderDur, 8s) ease-in-out infinite alternate,
              twinkle var(--twinkleDur, 1.8s) ease-in-out infinite alternate;
   animation-delay: var(--wanderDelay, 0s), var(--twinkleDelay, 0s);
@@ -104,7 +104,6 @@
   }
 }
 
-/* Styles for skill icons in Skills.jsx */
 .skill-icon-img {
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.45));
   transition: transform 200ms ease, filter 200ms ease;
@@ -117,4 +116,17 @@
 .skill-icon-fallback {
   font-size: 0.92rem;
   color: #e6eef7;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(0.25);
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

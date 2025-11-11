@@ -22,6 +22,7 @@ export default function Nav() {
                         <li><HashLink to="/" className={currentPath === '/' ? 'active' : ''} >Home</HashLink></li>
                         <li><HashLink to="/about#about" className={currentPath === '/about' ? 'active' : ''} smooth>About</HashLink></li>
                         <li><HashLink to="/education#education" className={currentPath === '/education' ? 'active' : ''}>Education</HashLink></li>
+                        <li><HashLink to="/skills#skills" className={currentPath === '/skills' ? 'active' : ''}>Skills</HashLink></li>
                         <li><HashLink to="/projects#projects" className={currentPath === '/projects' ? 'active' : ''}>Projects</HashLink></li>
 
                         <li><HashLink to="/contact#contact" className={currentPath === '/contact' ? 'active' : ''}>Contact</HashLink></li>
@@ -37,7 +38,7 @@ export default function Nav() {
                     <li><HashLink to="/" className={currentPath === '/' ? 'active' : ''} >Home</HashLink></li>
                     <li><HashLink to="/about#about" className={currentPath === '/about' ? 'active' : ''} smooth>About</HashLink></li>
                     <li><HashLink to="/education#education" className={currentPath === '/education' ? 'active' : ''}>Education</HashLink></li>
-                     <li><HashLink to="/skills#skills" className={currentPath === '/skills' ? 'active' : ''}>Skills</HashLink></li>
+                    <li><HashLink to="/skills#skills" className={currentPath === '/skills' ? 'active' : ''}>Skills</HashLink></li>
                     <li><HashLink to="/projects#projects" className={currentPath === '/projects' ? 'active' : ''}>Projects</HashLink></li>
 
                     <li><HashLink to="/contact#contact" className={currentPath === '/contact' ? 'active' : ''}>Contact</HashLink></li>

@@ -7,15 +7,15 @@ const AnimatedTitle = () => {
             Hi, I'm{' '}
             <TypeAnimation
                 sequence={[
-                    'Karim', // يكتب الاسم 
-                    2000,          // ينتظر ثانيتين (ممكن تزود أو تقلل المدة دي)
-                    '',            // يمسح الاسم (بإعطاء نص فارغ)
-                    500,           // ينتظر نص ثانية قبل ما يكتب تاني
+                    'Karim',
+                    2000,
+                    '',
+                    500,
                 ]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
-                color="red" // يكرر إلى ما لا نهاية
+                color="red"
 
             />
         </div>

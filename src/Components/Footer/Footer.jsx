@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const getIconUrl = (slug) => {
-    return `https://cdn.simpleicons.org/${slug}/ffffff`;
+const getIconUrl = (slug, color = null) => {
+    if (!slug) return '';
+    const safeColor = color ? String(color).replace('#', '') : null;
+    return safeColor ? `https://cdn.simpleicons.org/${slug}/${safeColor}` : `https://cdn.simpleicons.org/${slug}`;
 };
 
 
@@ -16,17 +18,17 @@ const contactLinks = [
     },
     {
         name: 'LinkedIn',
-        value: 'linkedin.com/karimmustafall',
+        value: 'karimmustafa11',
         slug: null,
         isCustomSVG: true,
-        href: 'https://linkedin.com/in/karimmustafall',
+        href: 'https://www.linkedin.com/in/karim-mustafa-949207318/',
         color: '#0A66C2'
     },
     {
         name: 'GitHub',
-        value: 'github.com/karimmustafall',
+        value: 'karimmustafa11',
         slug: 'github',
-        href: 'https://github.com/karimmustafall',
+        href: 'https://github.com/karimmustafa11',
         color: '#ffffff'
     },
     {
@@ -62,7 +64,7 @@ const itemVariants = {
 export default function Footer() {
     return (
         <motion.footer
-            className='bg-gray-950 py-16 px-4 border-t border-gray-800'
+            className='py-16 px-4  bg-black/70 text-white'
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -71,8 +73,8 @@ export default function Footer() {
             <div className='max-w-7xl mx-auto text-center'>
 
                 <motion.div variants={itemVariants} className='mb-12'>
-                    <h2 className='text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight tracking-wide'>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                    <h2 className='text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight tracking-wide'>
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
                             Let's Build Something Awesome
                         </span>
                         <span className='text-[#8cffff]'>.</span>
@@ -112,7 +114,7 @@ export default function Footer() {
                                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM4 21h4V9H4v12zM6 3.5c-1.11 0-2 .89-2 2s.89 2 2 2 2-.89 2-2-.89-2-2-2z" />
                                         </svg>
                                     ) : (
-                                        // Fallback لو أيقونة تالتة عملت مشكلة
+                                      
                                         <span className="text-3xl text-white">?</span>
                                     )
                                 ) : (

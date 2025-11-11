@@ -30,9 +30,8 @@ export default function Education() {
         });
     };
     return (
-        <div className="relative z-10 pb-16 pt-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 transition-colors duration-500"
+        <div className="relative z-10 pb-16 pt-8 bg-linear-to-br from-[#04060a] via-[#0b1830] to-[#071427] text-white transition-colors duration-500"
             id="education">
-            {/* ===== عنوان Education ===== */}
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -43,10 +42,9 @@ export default function Education() {
                 <h2 className="font-extrabold text-5xl dark:text-[#8cffff] text-blue-600 mb-2 mt-5 tracking-wide drop-shadow-md">
                     Education
                 </h2>
-                <span className="inline-block w-20 h-1 bg-gradient-to-r from-blue-600 to-red-500 rounded-full mx-auto shadow-lg"></span>
+                <span className="inline-block w-20 h-1 bg-linear-to-r from-blue-600 to-red-500 rounded-full mx-auto shadow-lg"></span>
             </motion.div>
 
-            {/* ===== المحتوى ===== */}
             <motion.div
                 className="w-full px-6 sm:px-10 md:px-16 lg:px-20 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10"
                 initial="hidden"
@@ -57,13 +55,12 @@ export default function Education() {
                     visible: {
                         opacity: 1,
                         transition: {
-                            staggerChildren: 0.3, // كل عنصر يظهر بعد التاني بـ0.3 ثانية
+                            staggerChildren: 0.3, 
                         },
                     },
                 }}
             >
 
-                {/* ==== العمود الأول ==== */}
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, y: 40 },
@@ -80,7 +77,7 @@ export default function Education() {
                         className={`block font-bold text-2xl sm:text-3xl md:text-4xl xl:text-5xl px-4 py-5 rounded-2xl transition-all duration-300 cursor-pointer leading-tight text-center w-full
         ml-8 lg:ml-0
         ${content.active1
-                                ? "bg-gradient-to-r from-blue-600 to-blue-950 text-white shadow-lg scale-[1.03]"
+                                ? "bg-linear-to-r from-blue-600 to-blue-950 text-white shadow-lg scale-[1.03]"
                                 : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-blue-500 hover:scale-[1.02]"
                             }`}
                     >
@@ -99,7 +96,7 @@ export default function Education() {
                         className={`block font-bold text-2xl sm:text-3xl md:text-4xl xl:text-5xl px-4 py-5 rounded-2xl transition-all duration-300 cursor-pointer leading-tight text-center w-full
         ml-8 lg:ml-0
         ${content.active2
-                                ? "bg-gradient-to-r from-blue-600 to-blue-950 text-white shadow-lg scale-[1.03]"
+                                ? "bg-linear-to-r from-blue-600 to-blue-950 text-white shadow-lg scale-[1.03]"
                                 : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-blue-500 hover:scale-[1.02]"
                             }`}
                     >
@@ -110,7 +107,6 @@ export default function Education() {
                     </motion.span>
                 </motion.div>
 
-                {/* ==== العمود الثاني ==== */}
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, y: 40 },
