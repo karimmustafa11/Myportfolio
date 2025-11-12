@@ -84,10 +84,10 @@ const itemVariants = {
 };
 
 export default function Projects() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        const handleResize = () => setIsMobile(window.innerWidth < 1024);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
@@ -112,16 +112,14 @@ export default function Projects() {
         <motion.section
             id="projects"
             className="relative py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-linear-to-br from-[#04060a] via-[#0e172a] to-[#071427] text-white min-h-screen overflow-hidden"
-            initial={isMobile ? "visible" : "hidden"}
-            whileInView={isMobile ? "visible" : "visible"}
-            viewport={isMobile ? undefined : { once: true, amount: 0.15 }}
-            variants={isMobile ? {} : containerVariants}
+            initial={!isMobile ? "hidden" : "visible"}
+            whileInView={"visible"}
+            viewport={!isMobile ? { once: true, amount: 0.15 } : undefined}
+            variants={!isMobile ? containerVariants : {}}
         >
-            {/* Background glow */}
             <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,rgba(0,255,255,0.1),transparent_70%),radial-gradient(circle_at_80%_80%,rgba(255,0,255,0.1),transparent_70%)]"></div>
 
-            {/* Header */}
-            <motion.div variants={isMobile ? {} : itemVariants} className="text-center mb-12 md:mb-20 relative z-10">
+            <motion.div variants={!isMobile ? itemVariants : {}} className="text-center mb-12 md:mb-20 relative z-10">
                 <motion.p className="text-cyan-400 font-bold text-sm tracking-[0.2em] uppercase mb-4 opacity-90">Featured Projects</motion.p>
                 <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-wide mb-4">
                     My{" "}
@@ -138,16 +136,15 @@ export default function Projects() {
                 {projectsData.map((project, index) => (
                     <motion.div
                         key={project.name}
-                        variants={isMobile ? {} : itemVariants}
+                        variants={!isMobile ? itemVariants : {}}
                         className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center p-8 sm:p-10 md:p-12 rounded-3xl bg-linear-to-br from-gray-800/40 via-gray-900/50 to-gray-950/60 border border-gray-700/50 shadow-[0_0_40px_-10px_rgba(0,0,0,0.7),inset_0_1px_1px_rgba(255,255,255,0.05)] backdrop-blur-lg hover:shadow-[0_0_60px_-10px_rgba(56,189,248,0.4),inset_0_1px_1px_rgba(255,255,255,0.1)] transition-all duration-500"
                     >
-                        {/* Text column */}
-                    <motion.div
+                        <motion.div
                             className="flex flex-col items-center lg:items-start text-center lg:text-left"
-                            initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                            whileInView={isMobile ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
-                            transition={isMobile ? undefined : { delay: 0.1, duration: 0.6 }}
-                            viewport={isMobile ? undefined : { once: true }}
+                            initial={!isMobile ? { opacity: 0, x: -50 } : { opacity: 1, x: 0 }}
+                            whileInView={!isMobile ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+                            transition={!isMobile ? { delay: 0.1, duration: 0.6 } : undefined}
+                            viewport={!isMobile ? { once: true } : undefined}
                         >
                             <span className="px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-cyan-500/20 border border-cyan-500/50 text-cyan-300 mb-3 shadow-[0_0_12px_rgba(56,189,248,0.4)]">Project {index + 1}</span>
                             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 text-white lg:bg-clip-text lg:text-transparent lg:bg-linear-to-r from-cyan-300 via-blue-400 to-purple-400 group-hover:from-purple-400 group-hover:via-pink-400 group-hover:to-cyan-300 transition-all duration-700">{project.name}</h3>
@@ -160,8 +157,8 @@ export default function Projects() {
                                     {project.tech.map((slug) => (
                                         <motion.div
                                             key={slug}
-                                            whileHover={{ scale: 1.15, rotate: 5 }}
-                                            whileTap={{ scale: 0.95 }}
+                                            whileHover={!isMobile ? { scale: 1.15, rotate: 5 } : {}}
+                                            whileTap={!isMobile ? { scale: 0.95 } : {}}
                                         >
                                             <img
                                                 src={getIconUrl(slug, brandColors[slug])}
@@ -181,8 +178,8 @@ export default function Projects() {
                                         href={project.demoLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59,130,246,0.45)" }}
-                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={!isMobile ? { scale: 1.05, boxShadow: "0 0 30px rgba(59,130,246,0.45)" } : {}}
+                                        whileTap={!isMobile ? { scale: 0.95 } : {}}
                                         className="px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl bg-linear-to-r from-blue-500 to-cyan-400 text-white hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition-all duration-300 backdrop-blur-sm border border-blue-400/50"
                                     >Demo</motion.a>
                                 ) : (
@@ -193,8 +190,8 @@ export default function Projects() {
                                         href={project.liveLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(236,72,153,0.6)" }}
-                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={!isMobile ? { scale: 1.05, boxShadow: "0 0 40px rgba(236,72,153,0.6)" } : {}}
+                                        whileTap={!isMobile ? { scale: 0.95 } : {}}
                                         className="px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl bg-linear-to-r from-pink-500 via-red-500 to-purple-600 text-white hover:shadow-[0_0_30px_rgba(236,72,153,0.8)] transition-all duration-300 backdrop-blur-sm border border-pink-400/50"
                                     >Go Live</motion.a>
                                 ) : (
@@ -205,8 +202,8 @@ export default function Projects() {
                                         href={project.githubLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.05, backgroundColor: "rgba(56,189,248,0.1)" }}
-                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={!isMobile ? { scale: 1.05, backgroundColor: "rgba(56,189,248,0.1)" } : {}}
+                                        whileTap={!isMobile ? { scale: 0.95 } : {}}
                                         className="px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-bold rounded-xl border-2 border-cyan-500/60 text-cyan-300 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                                     >GitHub</motion.a>
                                 ) : (
@@ -215,14 +212,13 @@ export default function Projects() {
                             </div>
                         </motion.div>
 
-                        {/* MacbookMockup column */}
                         <motion.div
                             className="flex justify-center items-center w-full mt-8 lg:mt-0"
-                            initial={isMobile ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.85, rotate: -5 }}
-                            whileInView={isMobile ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 1, scale: 1, rotate: 0 }}
-                            transition={isMobile ? undefined : { duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                            viewport={isMobile ? undefined : { once: true }}
-                            whileHover={isMobile ? {} : { scale: 1.03 }}
+                            initial={!isMobile ? { opacity: 0, scale: 0.85, rotate: -5 } : { opacity: 1, scale: 1, rotate: 0 }}
+                            whileInView={!isMobile ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 1, scale: 1, rotate: 0 }}
+                            transition={!isMobile ? { duration: 0.8, ease: "easeOut", delay: 0.2 } : undefined}
+                            viewport={!isMobile ? { once: true } : undefined}
+                            whileHover={!isMobile ? { scale: 1.03 } : {}}
                         >
                             <div className="relative w-full sm:max-w-sm md:max-w-md lg:max-w-lg">
                                 <div className="absolute -inset-8 bg-linear-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-3xl rounded-3xl group-hover:blur-2xl transition-all duration-500 -z-10"></div>
