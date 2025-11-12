@@ -52,7 +52,7 @@ function SocialMediaIcons() {
                 target="_blank"
                 className="
           /* إذا كنت تستخدم gradient مخصص، تأكد من تعريفه في tailwind.config.js أو استخدم لون مؤقت */
-          /* مثال: bg-pink-500 أو bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 */
+          /* مثال: bg-pink-500 أو bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600 */
           text-white 
           w-13  rounded-full flex items-center justify-center 
           text-xl font-bold 
