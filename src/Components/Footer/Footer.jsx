@@ -69,6 +69,7 @@ export default function Footer() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={containerVariants}
+            id='contact'
         >
             <div className='max-w-7xl mx-auto text-center'>
 
@@ -114,7 +115,7 @@ export default function Footer() {
                                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM4 21h4V9H4v12zM6 3.5c-1.11 0-2 .89-2 2s.89 2 2 2 2-.89 2-2-.89-2-2-2z" />
                                         </svg>
                                     ) : (
-                                      
+
                                         <span className="text-3xl text-white">?</span>
                                     )
                                 ) : (
