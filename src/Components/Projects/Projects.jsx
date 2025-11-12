@@ -70,16 +70,16 @@ const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { when: "beforeChildren", staggerChildren: 0.25 },
+        transition: { when: "beforeChildren", staggerChildren: 0.1 },
     },
 };
 
 const itemVariants = {
-    hidden: { opacity: 0, y: 60 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
         opacity: 1,
         y: 0,
-        transition: { type: "spring", stiffness: 120, damping: 20 },
+        transition: { duration: 0.5, ease: "easeOut" },
     },
 };
 
